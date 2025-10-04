@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-image: url('../assets/logo_fond/fond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #222;
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: background 0.3s;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.02);
+}
+.hero .logo{
+    height: 300px;
+}
+.hero .logo img {
+    height: 100%;
+}
+
+a.bare {
+    width: 300px;
+    max-width: 98vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.518);
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1.15rem;
+    color: #222;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.2s;
+    cursor: pointer;
+    font-weight: 500;
+    animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
+}
+a.b{
+    background-color: #74b4da;
+}
+a.bare:hover, a.bare:focus {
+    background: #f0f0f0;
+    color: #0078d4;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    outline: none;
+    transform: translateY(-3px) scale(1.03);
+}
+.box {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1000px) {
+    a.bare {
+        width: 100%;
+        min-width: 300px;
+        max-width: 100%;
+        font-size: 1.05rem;
+    }
+
+    .box {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 100%;
+        padding: 32px 0;
+        gap: 20px;
+    }
+    .hero .logo{
+    height: 150px;
+}
+    a.bare {
+        width: 98%;
+        font-size: 1rem;
+        padding: 6px 8px;
+    }
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
